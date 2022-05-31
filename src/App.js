@@ -13,11 +13,11 @@ class App extends Component {
   }
 
   componentDidMount(){
-    console.log(firebase)
+    // console.log(firebase)
     const messaging = firebase.messaging()
     // console.log(messaging)
     messaging.requestPermission().then(()=>{
-      console.log();
+      // console.log();
       return messaging.getToken()
     }).then(token=>{
       console.log('Token', token);
